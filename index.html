@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | FAQ accordion</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  
+  <div class="pai">
+      <div class="container">
+      
+      <div class="cont__titulo prin">
+        <img class="img__estrela" src="assets/images/icon-star.svg" alt="estrela__roxa">
+        <h1>FAQs</h1>
+      </div>
+
+      
+      <div class="cont__titulo secun">
+        <h3 class="titulo__secun">What is Frontend Mentor, and how will it help me?</h3>
+        <img id="button__ativa-um" src="assets/images/icon-plus.svg">
+        <img class="button__minimiza-um" src="assets/images/icon-minus.svg">
+      </div>
+      <p class="textoUm">Frontend Mentor offers realistic coding challenges to help developers improve their 
+        frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+        all levels and ideal for portfolio building.</p>
+      
+
+      <div class="cont__titulo secun">
+        <h3 class="titulo__secun">Is Frontend mentor free?</h3>
+        <img id="button__ativa-dois" src="assets/images/icon-plus.svg">
+        <img class="button__minimiza-dois" src="assets/images/icon-minus.svg">
+      </div>
+
+      <p class="textoDois">Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+      option providing access to a range of projects suitable for all skill levels.</p>
+
+      <div class="cont__titulo secun">
+        <h3 class="titulo__secun">Can I use Frontend Mentor projects in my portfolio</h3>
+        <img id="button__ativa-tres" src="assets/images/icon-plus.svg">
+        <img class="button__minimiza-tres" src="assets/images/icon-minus.svg">
+      </div>
+
+      <p class="textoTres">Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+      way to showcase your skills to potential employers!</p>
+
+      <div class="cont__titulo secun">
+        <h3 class="titulo__secun">How can I get help if I'm stuck on a Frontend Mentor challenge?</h3>
+        <img id="button__ativa-quatro" src="assets/images/icon-plus.svg">
+        <img class="button__minimiza-quatro" src="assets/images/icon-minus.svg">
+      </div>
+      
+      <p class="textoQuatro">The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+      channel where you can ask questions and seek support from other community members.</p>
+      </div>
+  </div>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script>
+    var button__ativa_um = document.getElementById('button__ativa-um');
+    var button__desativa_um = document.querySelector('.button__minimiza-um');
+
+    var button__ativa_dois = document.getElementById('button__ativa-dois');
+    var button__desativa_dois = document.querySelector('.button__minimiza-dois')
+
+    var button__ativa_tres = document.getElementById('button__ativa-tres');
+    var button__desativa_tres = document.querySelector('.button__minimiza-tres');
+
+    var button__ativa_quatro = document.getElementById('button__ativa-quatro');
+    var button__desativa_quatro = document.querySelector('.button__minimiza-quatro');
+
+    //PRIMEIRO
+    button__ativa_um.addEventListener('click', () => {
+      var texto = document.querySelector('.textoUm');
+      
+      texto.classList.toggle('ativo');
+      button__desativa_um.style.display = 'block'
+      button__ativa_um.style.display = 'none';
+    });
+    button__desativa_um.addEventListener('click', () => {
+      var texto = document.querySelector('.textoUm');
+      texto.classList.toggle('ativo');
+      button__ativa_um.style.display = 'block';
+      button__desativa_um.style.display = 'none';
+    })
+
+    //SEGUNDO
+    button__ativa_dois.addEventListener('click', () => {
+      var texto = document.querySelector('.textoDois');
+      
+      texto.classList.toggle('ativo');
+      button__desativa_dois.style.display = 'block'
+      button__ativa_dois.style.display = 'none';
+    });
+    button__desativa_dois.addEventListener('click', () => {
+      var texto = document.querySelector('.textoDois');
+      texto.classList.toggle('ativo');
+      button__ativa_dois.style.display = 'block';
+      button__desativa_dois.style.display = 'none';
+    })
+
+    //TERCEIRA
+    button__ativa_tres.addEventListener('click', () => {
+      var texto = document.querySelector('.textoTres');
+      
+      texto.classList.toggle('ativo');
+      button__desativa_tres.style.display = 'block'
+      button__ativa_tres.style.display = 'none';
+    });
+    button__desativa_tres.addEventListener('click', () => {
+      var texto = document.querySelector('.textoTres');
+      texto.classList.toggle('ativo');
+      button__ativa_tres.style.display = 'block';
+      button__desativa_tres.style.display = 'none';
+    })
+
+    //QUARTO
+    button__ativa_quatro.addEventListener('click', () => {
+      var texto = document.querySelector('.textoQuatro');
+      
+      texto.classList.toggle('ativo');
+      button__desativa_quatro.style.display = 'block'
+      button__ativa_quatro.style.display = 'none'
+    });
+    button__desativa_quatro.addEventListener('click', () => {
+      var texto = document.querySelector('.textoQuatro');
+      texto.classList.toggle('ativo');
+      button__ativa_quatro.style.display = 'block';
+      button__desativa_quatro.style.display = 'none';
+    })
+ 
+ </script>
+</body>
+</html>
